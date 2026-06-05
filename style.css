@@ -1,0 +1,831 @@
+:root {
+  --pri: #fae6d1;
+  --sec: #381c0a;
+  --ter1: #feba17;
+  --ter2: #74512d;
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 200;
+  src: url("./fonts/AeonikTRIAL-Light.otf");
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url("./fonts/AeonikTRIAL-Regular.otf");
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url("./fonts/AeonikTRIAL-Bold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: aeonik;
+  color: var(--pri);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+}
+
+nav {
+  width: 100%;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: var(--ter2);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav #themeBtn{
+  padding: 15px 20px;
+  text-transform: capitalize;
+  background-color: var(--pri);
+  color: var(--sec);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: all ease 0.2s;
+  outline: none;
+}
+
+nav #themeBtn:active{
+  scale: 0.97;
+}
+
+
+
+/* ==========Cards Section======== */
+section.allElems {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  overflow: auto;
+  position: absolute;
+}
+
+.allElems .allfeatures{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  
+}
+
+/*======landing page header=========*/
+
+.allElems header {
+  background-color: black;
+  position: relative;
+  /* height: 400px; */
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 30px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.allElems header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.133), rgba(0, 0, 0, 0.292)),
+    url(./image/banner5.jpg);
+  background-size: cover;
+  background-position: top;
+  filter: blur(2px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.allElems header .left,
+.allElems header .right {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.allElems header .left h3{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.allElems header .left h1{
+  font-size: 70px;
+}
+
+.allElems header .left p{
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.allElems header .right h1{
+  font-size: 65px;
+}
+
+.allElems header .right h3{
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.allElems header .right p{
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+.elem {
+  background-color: #feba17;
+  height: 400px;
+  width: 310px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.elem h2 {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 500;
+  bottom: 5%;
+  left: 5%;
+}
+
+.elem:active {
+  scale: 0.97;
+}
+
+/*======= features Full Pages Section======= */
+.fullElem {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  background-color: var(--sec);
+  display: none;
+  position: absolute;
+  z-index: 5;
+}
+
+.fullElem .back {
+  background-color: var(--pri);
+  color: var(--sec);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 45px;
+  right: 3%;
+}
+
+.fullElem .back i {
+  color: var(--sec);
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.fullElem .back:active{
+  scale: 0.97;
+}
+
+/*==========  Styling ecah feature pages ====*/
+
+/* ======================styling ToDO List planner page=========================== */
+/* .toDoListFullPage {
+  display: block;
+} */
+.toDoListFullPage h1 {
+  font-size: 45px;
+}
+
+.toDoListFullPage .toDoContainer {
+  height: 80%;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.toDoListFullPage .toDoContainer .addTask {
+  background-color: var(--ter2);
+  border-radius: 10px;
+  height: 100%;
+  width: 40%;
+}
+
+.toDoListFullPage .toDoContainer .allTask {
+  background-color: var(--ter2);
+  border-radius: 10px;
+  height: 100%;
+  width: 60%;
+  padding: 10px 20px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.toDoListFullPage .toDoContainer .allTask::-webkit-scrollbar {
+  display: none;
+}
+
+/* add task form */
+.toDoListFullPage .toDoContainer .addTask form {
+  height: 100%;
+  width: 100%;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.toDoContainer .addTask form input,
+.toDoContainer .addTask form textarea,
+.toDoContainer .addTask form button {
+  padding: 20px 15px;
+  font-size: 18px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  color: var(--pri);
+  background-color: var(--sec);
+}
+
+.toDoContainer .addTask form textarea {
+  resize: none;
+  height: 500px;
+}
+
+.toDoContainer .addTask form button {
+  background-color: var(--ter1);
+  color: #381c0a;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.toDoContainer .addTask form button:active {
+  scale: 0.97;
+}
+
+.toDoContainer .addTask form .textBoxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toDoContainer .addTask form input[type="checkbox"] {
+  accent-color: var(--ter1);
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.toDoContainer .addTask form label {
+  margin-left: 10px;
+  color: var(--pri);
+  font-size: 20px;
+}
+
+/* Showing Tasks */
+
+.toDoListFullPage .toDoContainer .allTask .task {
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--pri);
+  margin-bottom: 15px;
+}
+
+.toDoListFullPage .toDoContainer .allTask .task h5 {
+  font-size: 24px;
+  color: var(--sec);
+  position: relative;
+}
+
+.toDoListFullPage .toDoContainer .allTask .task h5 sup {
+  font-size: 14px;
+  color: rgb(194, 0, 0);
+}
+
+.toDoListFullPage .toDoContainer .allTask .task i {
+  font-size: 24px;
+  color: var(--sec);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.toDoListFullPage .toDoContainer .allTask .task button {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px;
+  background-color: var(--ter1);
+  color: var(--sec);
+  cursor: pointer;
+  border: none;
+  transition: all ease 0.2s;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.508);
+}
+
+.toDoListFullPage .toDoContainer .allTask .task button:active {
+  scale: 0.97;
+}
+
+/* details of specific task */
+.toDoListFullPage .toDoContainer .allTask .pop-up {
+  /* height: 250px; */
+  width: 80%;
+  position: absolute;
+  /* background-color: var(--pri); */
+  background-color: rgba(244, 244, 244, 0.895);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 18px;
+  color: var(--sec);
+  z-index: 10;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.allTask .pop-up h2 {
+  font-size: 30px;
+  color: var(--sec);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.allTask .pop-up p {
+  font-size: 20px;
+  color: var(--sec);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.allTask .pop-up button {
+  font-size: 16;
+  background-color: var(--sec);
+  font-weight: 500;
+  padding: 10px 15px;
+  color: var(--pri);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ======================styling the daily planner page=========================== */
+/* .dailyPlannerFullPage {
+  display: block;
+} */
+
+.dailyPlannerFullPage h1 {
+  font-size: 45px;
+}
+
+.dailyPlannerFullPage .dayPlanner{
+  background-color: var(--ter2);
+  height: 90%;
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.dailyPlannerFullPage .dayPlanner::-webkit-scrollbar {
+  display: none;
+}
+
+.dailyPlannerFullPage .dayPlanner .dayPlannerTime{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 15px;
+}
+
+.dayPlanner .dayPlannerTime input{
+  width: 100%;
+  padding: 20px 40px;
+  background-color: var(--sec);
+  border: none;
+  outline: none;
+  padding-top: 30px;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.dayPlanner .dayPlannerTime p{
+  position: absolute;
+  top: 10%;
+  left: 0.5%;
+  font-size: 16px;
+  color: var(--pri);
+}
+
+
+/*==================== Motivational quotes page design =============== */
+.motivateFullPage{
+  /* display: block; */
+  position: relative;
+}
+
+.motivationContainer{
+  /* height: 500px;
+  width: 650px; */
+  background-color: var(--ter1);
+  border-radius: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.motivationContainer .dateBar{
+  padding: 20px;
+  width: 100%;
+  /* height: 80px; */
+  background-color: #381c0a1d;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.motivationContainer .dateBar p{
+  color: #58391a;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.motivationContainer .dateBar .dateBox{
+  background-color:var(--pri);
+  color: var(--sec);
+  padding: 12px 18px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.motivationContainer .dateBar .dateBox h2{
+  font-size: 18px;
+  font-weight: 700;
+  color: #381c0aa3;
+  text-transform: uppercase;
+}
+.motivationContainer .dateBar .dateBox h3{
+  /* margin-top: 5px; */
+  font-size: 24px;
+  font-weight: 500;
+  color: #996b01;
+}
+
+.motivationContainer .quoteBox{
+  padding: 50px 20px;
+  
+}
+.motivationContainer .quoteBox h1{
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: #58391a;
+  font-weight: 700;
+}
+
+.motivationContainer .quoteBox h5{
+  font-size: 24px;
+  color: var(--ter2);
+  margin-bottom: 20px;
+  position: absolute;
+  right: 5%;
+}
+
+/*=============== Pompdoro timer page design======================= */
+
+.PomodoroFullPage h1{
+  font-size: 45px;
+}
+
+.PomodoroFullPage .timerContainer{
+  background-color: var(--ter1);
+  width: 500px;
+  border-radius: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.timerContainer h2{
+  font-size: 60px;
+  color: #58391a;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.timerContainer .breaks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.timerContainer .breaks .break{
+  border: var(--sec) solid 2px;
+  color: var(--sec);
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.breakActive{
+  background-color: var(--sec);
+  color: var(--pri) !important;
+}
+
+.timerContainer .breaks .break:active{
+  scale: 0.97;
+}
+
+.timerContainer #timer{
+  font-size: 120px;
+  color: var(--sec);
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.timerContainer .btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.timerContainer .btns button{
+  background-color: var(--sec);
+  color: var(--pri);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.timerContainer .btns button:active{
+  scale: 0.97;
+}
+
+/*=============== Habit tracker page design======================= */
+
+
+.habitsFullPage h1{
+  font-size: 45px;
+}
+
+.habitsFullPage .habitTrackerContainer{
+  height: 84%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.habitTrackerContainer .habitTrackerLeft{
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.habitTrackerContainer .habitTrackerRight{
+  width: 64%;
+  background-color: var(--ter2);
+  border-radius: 20px;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+.habitTrackerContainer .habitTrackerRight::-webkit-scrollbar{
+  display: none;
+}
+
+
+.habitTrackerLeft .habitAddCard,
+.habitTrackerLeft .habitProgressCard{
+  background-color: var(--ter2);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+
+
+.habitTrackerLeft .habitAddCard h3,
+.habitTrackerLeft .habitProgressCard h3,
+.habitTrackerRight .habitListHeader h3{
+  font-size: 28px;
+  color: var(--pri);
+  margin-bottom: 18px;
+}
+
+.habitTrackerLeft .habitAddCard form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.habitAddCard form input{
+  width: 100%;
+  padding: 18px 16px;
+  font-size: 18px;
+  background-color: var(--sec);
+  color: var(--pri);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.habitAddCard form button{
+  width: 100%;
+  padding: 18px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sec);
+  background-color: var(--ter1);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.habitAddCard form button:active{
+  scale: 0.97;
+}
+
+.habitProgressCard .progressText{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.habitProgressCard .progressText p{
+  font-size: 18px;
+  color: #f7d7a8;
+}
+
+.habitProgressCard .progressBar{
+  height: 18px;
+  width: 100%;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: rgba(250, 230, 209, 0.18);
+}
+
+.habitProgressCard .progressBar .progressFill{
+  height: 100%;
+  width: 60%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #feba17 0%, #ffd36a 100%);
+}
+
+.habitTrackerRight .habitListHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.habitTrackerRight .habitListHeader span{
+  font-size: 18px;
+  color: #f7d7a8;
+  padding: 10px 18px;
+  border: 1px solid rgba(250, 230, 209, 0.3);
+  border-radius: 999px;
+}
+
+.habitTrackerRight .habitList{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.habitList .habitCard{
+  background-color: var(--pri);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.habitList .habitCard.completed{
+  background: linear-gradient(135deg, #fae6d1 0%, #f7d7a8 100%);
+}
+
+.habitCard .habitInfo h4{
+  font-size: 28px;
+  color: var(--sec);
+  margin-bottom: 8px;
+}
+
+.habitCard .habitInfo p{
+  font-size: 18px;
+  color: #6a4321;
+}
+
+.habitCard.completed .habitInfo h4{
+  text-decoration: line-through;
+}
+
+.habitCard .habitActions{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.habitCard .habitActions button{
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.habitCard .habitActions button:active{
+  scale: 0.97;
+}
+
+.habitCard .habitActions .statusBtn{
+  background-color: var(--sec);
+  color: var(--pri);
+}
+
+.habitCard .habitActions .statusBtn.done{
+  background-color: #5f3a19;
+  color: #ffd36a;
+}
+
+.habitCard .habitActions .deleteBtn{
+  background-color: #e7b86d;
+  color: var(--sec);
+}
