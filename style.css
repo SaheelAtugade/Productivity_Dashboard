@@ -45,8 +45,7 @@ main {
 
 nav {
   width: 100%;
-  padding: 15px 30px;
-  margin-bottom: 20px;
+  padding: 10px 20px;
   border-radius: 20px;
   background-color: var(--ter2);
   text-transform: capitalize;
@@ -79,8 +78,8 @@ nav #themeBtn:active{
 section.allElems {
   height: 100%;
   width: 100%;
-  padding: 40px;
-  overflow: auto;
+  padding: 30px;
+  overflow: hidden;
   position: absolute;
 }
 
@@ -89,7 +88,7 @@ section.allElems {
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 20px;
   
 }
 
@@ -100,8 +99,8 @@ section.allElems {
   position: relative;
   /* height: 400px; */
   width: 100%;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-radius: 20px;
   overflow: hidden;
   padding: 30px 35px;
@@ -116,7 +115,7 @@ section.allElems {
   inset: 0;
   background:
     linear-gradient(rgba(0, 0, 0, 0.133), rgba(0, 0, 0, 0.292)),
-    url(./image/banner5.jpg);
+    url(./image/header-banner.jpg);
   background-size: cover;
   background-position: top;
   filter: blur(2px);
@@ -166,8 +165,8 @@ section.allElems {
 }
 .elem {
   background-color: #feba17;
-  height: 400px;
-  width: 310px;
+  height: 300px;
+  width: 250px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
