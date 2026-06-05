@@ -44,7 +44,7 @@ function showWeatherFallback() {
   headerRight.innerHTML = `
     <div>
       <h1>--&deg;C</h1>
-      <h3>Weather unavailable</h3>
+      <h3>Weather unavailable (Allow Location)</h3>
     </div>
     <div>
       <p>Desc: Unable to load</p>
