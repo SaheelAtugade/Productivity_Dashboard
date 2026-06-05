@@ -164,9 +164,10 @@ section.allElems {
   margin-bottom: 5px;
 }
 .elem {
-  background-color: #feba17;
+  background-color: #000000;
   height: 300px;
   width: 250px;
+  text-transform: capitalize;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
