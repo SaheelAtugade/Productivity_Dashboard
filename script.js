@@ -514,3 +514,46 @@ function updateHabitProgress() {
 
   progressFill.style.width = `${percent}%`;
 }
+
+//==========================theme toggle============================//
+let themeBtn = document.querySelector("#themeBtn");
+let root = document.documentElement;
+
+const themes = {
+  warm: {
+    pri: "#fae6d1",
+    sec: "#381c0a",
+    ter1: "#feba17",
+    ter2: "#74512d",
+  },
+  forest: {
+    pri: "#FFE3E3",
+    ter1: "#8FDDDF",
+    ter2: "#FFAE6E",
+    sec: "#EC6530",
+    // pri: "#fae6d1",
+    // sec: "#0a2d38",
+    // ter1: "#accaff",
+    // ter2: "#2d6c74",
+  },
+};
+
+function applyTheme(themeName) {
+  let activeTheme = themes[themeName] || themes.warm;
+
+  root.style.setProperty("--pri", activeTheme.pri);
+  root.style.setProperty("--sec", activeTheme.sec);
+  root.style.setProperty("--ter1", activeTheme.ter1);
+  root.style.setProperty("--ter2", activeTheme.ter2);
+
+  localStorage.setItem("selectedTheme", themeName);
+}
+
+let savedTheme = localStorage.getItem("selectedTheme") || "warm";
+applyTheme(savedTheme);
+
+themeBtn.addEventListener("click", function () {
+  let currentTheme = localStorage.getItem("selectedTheme") || "warm";
+  let nextTheme = currentTheme === "warm" ? "forest" : "warm";
+  applyTheme(nextTheme);
+});
